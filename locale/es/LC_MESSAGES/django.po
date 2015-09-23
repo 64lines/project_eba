@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 14:19+0000\n"
+"POT-Creation-Date: 2015-09-23 14:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: eba/forms.py:4
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: eba/forms.py:5
+msgid "Password"
+msgstr "Contraseña"
 
 #: eba/models.py:6 eba/models.py:16 eba/models.py:34
 msgid "Name"
