@@ -5,7 +5,7 @@ Instrucciones para Windows / Windows Intructions (Spanish)
 3. Instalar en C:\Python27
 4. Click derecho en Equipo 
    > Propiedades 
-   > Propiedades Avanzadas
+   > Configuración Avanzada del Sistema
    > Opciones Avanzadas
    > Variables de Entorno
    > Buscar una variable del sistema llamada "Path"

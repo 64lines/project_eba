@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-23 14:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: eba/models.py:6 eba/models.py:16 eba/models.py:34
+msgid "Name"
+msgstr "Nombre"
+
+#: eba/models.py:9 eba/models.py:40
+msgid "Category"
+msgstr "Categoría"
+
+#: eba/models.py:10
+msgid "Categories"
+msgstr "Categorias"
+
+#: eba/models.py:17
+msgid "Lecturer"
+msgstr "Conferencista"
+
+#: eba/models.py:18
+msgid "Abstract"
+msgstr "Resumen"
+
+#: eba/models.py:21 eba/models.py:41
+msgid "Conference"
+msgstr "Conferencia"
+
+#: eba/models.py:22
+msgid "Conferences"
+msgstr "Conferencias"
+
+#: eba/models.py:35
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#: eba/models.py:36
+msgid "End date"
+msgstr "Fecha de finalización"
+
+#: eba/models.py:37
+msgid "Place"
+msgstr "Lugar"
+
+#: eba/models.py:38
+msgid "Room"
+msgstr "Salón"
+
+#: eba/models.py:39
+msgid "Event type"
+msgstr "Tipo de evento"
+
+#: eba/models.py:44
+msgid "Event"
+msgstr "Evento"
+
+#: eba/models.py:45
+msgid "Events"
+msgstr "Eventos"
