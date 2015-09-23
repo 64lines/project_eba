@@ -1,4 +1,11 @@
 {% block content %}
-    <h1>{{ app_name }}'s Index page!</h1>
+    <h1>Login</h1>
+    <form action='/' method='post'>
+        <table>
+            {% csrf_token %}
+            {{ login_form.as_table }}
+        </table>
+        <input type='submit' value='Login'/>
+    </form>
 {% endblock %}
 
