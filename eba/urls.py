@@ -19,4 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'eba.views.index_page', name='index_page'),
+    url(r'^all_events/$', 'eba.views.all_events', name='all_events'),
+    url(r'^all_users/$', 'eba.views.all_users', name='all_users'),
 ]
