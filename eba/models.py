@@ -24,19 +24,23 @@ class Conference(models.Model):
     def __unicode__(self):
         return self.name
 
-class Event(models.Model):
-    EVENT_TYPE = (
-        ('C', 'Congreso'),
-        ('S', 'Seminario'),
-        ('T', 'Taller'),
-    )
+class ActivityType(models.Model):
+    name = models.CharField(verbose_name=_("Name"), max_length=30)
 
+    class Meta:
+        verbose_name = _('Activity type')
+        verbose_name_plural = _('Activity types')
+
+    def __unicode__(self):
+        return self.name
+
+class Activity(models.Model):
     name = models.CharField(verbose_name=_("Name"), max_length=30)
     start_date = models.DateTimeField(verbose_name=_("Start date"))
     end_date = models.DateTimeField(verbose_name=_("End date"))
     place = models.CharField(verbose_name=_("Place"), max_length=30)
     room = models.CharField(verbose_name=_("Room"), max_length=30)
-    event_type = models.CharField(verbose_name=_("Event type"), max_length=1, choices=EVENT_TYPE)
+    activity_type = models.ForeignKey(ActivityType, verbose_name=_("Activity type"))
     category = models.ForeignKey(Category, verbose_name=_("Category"))
     conference = models.ManyToManyField(Conference, verbose_name=_("Conference"))
 
@@ -49,4 +53,5 @@ class Event(models.Model):
 
 admin.site.register(Category)
 admin.site.register(Conference)
-admin.site.register(Event)
+admin.site.register(Activity)
+admin.site.register(ActivityType)

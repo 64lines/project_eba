@@ -8,7 +8,7 @@ from django.utils.translation import ugettext as _
 from forms import LoginForm
 from django.http import HttpResponse
 from django.contrib.auth.forms import User
-from models import Event
+from models import Activity
 import json
 
 def index_page(request): 
@@ -49,7 +49,7 @@ y los trae como un JSON
 
 """
 def all_events(request):
-    list_events = Event.objects.all()
+    list_events = Activity.objects.all()
     list_response = []
 
     for event in list_events:            

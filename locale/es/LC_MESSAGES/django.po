@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 18:08+0000\n"
+"POT-Creation-Date: 2015-10-21 13:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,11 +26,11 @@ msgstr "Nombre de usuario"
 msgid "Password"
 msgstr "Contraseña"
 
-#: eba/models.py:6 eba/models.py:16 eba/models.py:34
+#: eba/models.py:6 eba/models.py:16 eba/models.py:28 eba/models.py:38
 msgid "Name"
 msgstr "Nombre"
 
-#: eba/models.py:9 eba/models.py:40
+#: eba/models.py:9 eba/models.py:44
 msgid "Category"
 msgstr "Categoría"
 
@@ -46,7 +46,7 @@ msgstr "Conferencista"
 msgid "Abstract"
 msgstr "Resumen"
 
-#: eba/models.py:21 eba/models.py:41
+#: eba/models.py:21 eba/models.py:45
 msgid "Conference"
 msgstr "Conferencia"
 
@@ -54,46 +54,50 @@ msgstr "Conferencia"
 msgid "Conferences"
 msgstr "Conferencias"
 
-#: eba/models.py:35
+#: eba/models.py:31 eba/models.py:43
+msgid "Activity type"
+msgstr "Tipo de actividad"
+
+#: eba/models.py:32
+msgid "Activity types"
+msgstr "Tipos de actividad"
+
+#: eba/models.py:39
 msgid "Start date"
 msgstr "Fecha de inicio"
 
-#: eba/models.py:36
+#: eba/models.py:40
 msgid "End date"
 msgstr "Fecha de finalización"
 
-#: eba/models.py:37
+#: eba/models.py:41
 msgid "Place"
 msgstr "Lugar"
 
-#: eba/models.py:38
+#: eba/models.py:42
 msgid "Room"
 msgstr "Salón"
 
-#: eba/models.py:39
-msgid "Event type"
-msgstr "Tipo de evento"
-
-#: eba/models.py:44
+#: eba/models.py:48
 msgid "Event"
 msgstr "Evento"
 
-#: eba/models.py:45
+#: eba/models.py:49
 msgid "Events"
 msgstr "Eventos"
 
-#: eba/views.py:28
+#: eba/views.py:32
 msgid "User is valid, active and authenticated"
 msgstr "El usuario es válido, activo y autenticado"
 
-#: eba/views.py:30
+#: eba/views.py:34
 msgid "The password is valid, but the account has been disabled!"
 msgstr "La contraseña es válida, pero la cuenta ha sido deshabilitada"
 
-#: eba/views.py:33
+#: eba/views.py:37
 msgid "The username and password are incorrect."
 msgstr "El nombre de usuario y la contraseña son incorrectos"
 
-#: eba/views.py:39
+#: eba/views.py:43
 msgid "Login"
 msgstr "Ingreso"
