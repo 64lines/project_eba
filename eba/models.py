@@ -45,8 +45,8 @@ class Activity(models.Model):
     conference = models.ManyToManyField(Conference, verbose_name=_("Conference"))
 
     class Meta:
-        verbose_name = _('Event')
-        verbose_name_plural = _('Events')
+        verbose_name = _('Activity')
+        verbose_name_plural = _('Activities')
 
     def __unicode__(self):
         return self.name

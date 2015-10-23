@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-21 13:17-0500\n"
+"POT-Creation-Date: 2015-10-21 13:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,25 +79,27 @@ msgid "Room"
 msgstr "Salón"
 
 #: eba/models.py:48
-msgid "Event"
-msgstr "Evento"
+msgid "Activity"
+msgstr "Actividad"
 
 #: eba/models.py:49
-msgid "Events"
-msgstr "Eventos"
+msgid "Activities"
+msgstr "Actividades"
 
-#: eba/views.py:32
-msgid "User is valid, active and authenticated"
-msgstr "El usuario es válido, activo y autenticado"
+#~ msgid "Event"
+#~ msgstr "Evento"
 
-#: eba/views.py:34
-msgid "The password is valid, but the account has been disabled!"
-msgstr "La contraseña es válida, pero la cuenta ha sido deshabilitada"
+#~ msgid "Events"
+#~ msgstr "Eventos"
 
-#: eba/views.py:37
-msgid "The username and password are incorrect."
-msgstr "El nombre de usuario y la contraseña son incorrectos"
+#~ msgid "User is valid, active and authenticated"
+#~ msgstr "El usuario es válido, activo y autenticado"
 
-#: eba/views.py:43
-msgid "Login"
-msgstr "Ingreso"
+#~ msgid "The password is valid, but the account has been disabled!"
+#~ msgstr "La contraseña es válida, pero la cuenta ha sido deshabilitada"
+
+#~ msgid "The username and password are incorrect."
+#~ msgstr "El nombre de usuario y la contraseña son incorrectos"
+
+#~ msgid "Login"
+#~ msgstr "Ingreso"
