@@ -11,11 +11,13 @@ from django.contrib.auth.forms import User
 from models import Activity
 import json
 
+def index_page(request):
+    return render_to_response('index.html')
+
+"""
 def index_page(request): 
-    """
-    Loads the login page and contains the validations to 
-    authenticate an user.
-    """
+    # Loads the login page and contains the validations to 
+    # authenticate an user.
 
     if request.method == 'POST':
         login_form = LoginForm(request.POST) 
@@ -43,6 +45,7 @@ def index_page(request):
         'login_title': _("Login") 
     })
     return render_to_response('index.html', variables)
+"""
 """
 Esta vista realiza la consulta de todos los eventos en la base de datos filtrados por el nombre del evento
 y los trae como un JSON
