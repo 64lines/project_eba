@@ -19,6 +19,10 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'eba.views.index_page', name='index_page'),
-    url(r'^all_events/$', 'eba.views.all_events', name='all_events'),
-    url(r'^all_users/$', 'eba.views.all_users', name='all_users'),
+    url(r'^json_all_events/$', 'eba.views.json_all_events', name='all_events'),
+    url(r'^json_conferences_by_event/$', 'eba.views.json_conferences_by_event', name='conferences_by_event'),
+    url(r'^json_login/$', 'eba.views.json_login', name='login'),
+    url(r'^json_register/$', 'eba.views.json_register', name='register'),
+    url(r'^json_all_users/$', 'eba.views.json_all_users', name='all_users'),
+    url(r'^json_event_registration/$', 'eba.views.json_event_registration', name='event_registration'),
 ]
