@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-21 13:55-0500\n"
+"POT-Creation-Date: 2015-10-24 09:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,68 +26,114 @@ msgstr "Nombre de usuario"
 msgid "Password"
 msgstr "Contraseña"
 
-#: eba/models.py:6 eba/models.py:16 eba/models.py:28 eba/models.py:38
+#: eba/models.py:7 eba/models.py:28 eba/models.py:38 eba/models.py:48
+#: eba/models.py:63
 msgid "Name"
 msgstr "Nombre"
 
-#: eba/models.py:9 eba/models.py:44
+#: eba/models.py:10
 msgid "Category"
 msgstr "Categoría"
 
-#: eba/models.py:10
+#: eba/models.py:11
 msgid "Categories"
 msgstr "Categorias"
 
 #: eba/models.py:17
+msgid "Full Name"
+msgstr "Nombre completo"
+
+#: eba/models.py:18 eba/models.py:65
+msgid "Summary"
+msgstr "Resumen"
+
+#: eba/models.py:21 eba/models.py:64
 msgid "Lecturer"
 msgstr "Conferencista"
 
-#: eba/models.py:18
-msgid "Abstract"
-msgstr "Resumen"
-
-#: eba/models.py:21 eba/models.py:45
-msgid "Conference"
-msgstr "Conferencia"
-
 #: eba/models.py:22
-msgid "Conferences"
-msgstr "Conferencias"
+msgid "Lecturers"
+msgstr "Conferencistas"
 
-#: eba/models.py:31 eba/models.py:43
-msgid "Activity type"
-msgstr "Tipo de actividad"
+#: eba/models.py:31 eba/models.py:66
+msgid "Conference type"
+msgstr "Tipo de Conferencia"
 
 #: eba/models.py:32
-msgid "Activity types"
-msgstr "Tipos de actividad"
+msgid "Conference types"
+msgstr "Tipos de Conferencias"
 
-#: eba/models.py:39
+#: eba/models.py:41 eba/models.py:52 eba/models.py:67
+msgid "Location"
+msgstr "Ubicación"
+
+#: eba/models.py:42
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#: eba/models.py:49
+msgid "Description"
+msgstr "Descripción"
+
+#: eba/models.py:50
 msgid "Start date"
 msgstr "Fecha de inicio"
 
-#: eba/models.py:40
+#: eba/models.py:51
 msgid "End date"
 msgstr "Fecha de finalización"
 
-#: eba/models.py:41
-msgid "Place"
-msgstr "Lugar"
+#: eba/models.py:53 eba/models.py:68
+msgid "Details"
+msgstr "Detalles"
 
-#: eba/models.py:42
-msgid "Room"
-msgstr "Salón"
+#: eba/models.py:56 eba/models.py:57 eba/models.py:69
+msgid "Event"
+msgstr "Evento"
 
-#: eba/models.py:48
-msgid "Activity"
-msgstr "Actividad"
+#: eba/models.py:72 eba/models.py:80
+msgid "Conference"
+msgstr "Conferencia"
 
-#: eba/models.py:49
-msgid "Activities"
-msgstr "Actividades"
+#: eba/models.py:73
+msgid "Conferences"
+msgstr "Conferencias"
 
-#~ msgid "Event"
-#~ msgstr "Evento"
+#: eba/models.py:79
+msgid "User"
+msgstr "Usuario"
+
+#: eba/models.py:83
+msgid "Attendant"
+msgstr "Asistente"
+
+#: eba/models.py:84
+msgid "Attendants"
+msgstr "Asistentes"
+
+#~ msgid "Asistente"
+#~ msgstr "Asistente"
+
+#~ msgid "Abstract"
+#~ msgstr "Resumen"
+
+#~ msgid "Activity type"
+#~ msgstr "Tipo de actividad"
+
+#~ msgid "Activity types"
+#~ msgstr "Tipos de actividad"
+
+#~ msgid "Place"
+#~ msgstr "Lugar"
+
+#~ msgid "Room"
+#~ msgstr "Salón"
+
+#~ msgid "Activity"
+#~ msgstr "Actividad"
+
+#~ msgid "Activities"
+#~ msgstr "Actividades"
 
 #~ msgid "Events"
 #~ msgstr "Eventos"
