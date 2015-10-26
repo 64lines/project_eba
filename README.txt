@@ -18,3 +18,8 @@ pip install django
 exit
 # Deploy application
 rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=eba/wsgi.py --app eba 
+Root User: adminzbqagqe
+Root Password: _rCi5MSACkIJ
+Database Name: eba
+
+Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT

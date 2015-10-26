@@ -66,6 +66,8 @@ class Conference(models.Model):
     lecturer = models.ForeignKey(Lecturer, verbose_name=_("Lecturer"))
     summary = models.TextField(verbose_name=_("Summary"))
     conference_type = models.ForeignKey(ConferenceType, verbose_name=_("Conference type"))
+    start_date = models.DateTimeField(verbose_name=_("Start date"))
+    end_date = models.DateTimeField(verbose_name=_("End date"))
     location = models.ForeignKey(Location, verbose_name=_("Location"))
     details = models.TextField(verbose_name=_("Details"))
     event = models.ForeignKey(Event, verbose_name=_("Event"))
