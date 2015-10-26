@@ -11,6 +11,7 @@ from django.contrib.auth.forms import User
 from models import Event
 from models import Conference
 from models import Attendant
+from models import Lecturer
 from django.core import serializers
 import json
 
@@ -31,7 +32,10 @@ def json_conferences_by_event(request):
     if id_event:
         conferences_list = Conference.objects.filter(event__id=id_event)
 
-    json_response = serializers.serialize('json', conferences_list)
+    json_response = serializers.serialize(
+        'json', 
+        conferences_list,
+    )
     return HttpResponse(json_response)
 
 # Login an user using its email and password.
@@ -57,8 +61,13 @@ def json_event_registration(request):
     selected_user = None
     user_id = request.REQUEST.get("user", None)
     code = request.REQUEST.get("code", None)
-
-    events_qs = Event.objects.filter(code=code)
+    event_id = request.REQUEST.get("event", None)
+    
+    if code:
+        events_qs = Event.objects.filter(code=code)
+    elif event_id:
+        events_qs = Event.objects.filter(pk=event_id)
+        
     event = events_qs.first() if events_qs else None
     
     user_qs = User.objects.filter(pk=user_id)
@@ -67,17 +76,32 @@ def json_event_registration(request):
 
     if event: 
         conferences_list = Conference.objects.filter(event=event)
+        attendant_qs = Attendant.objects.filter(
+            user=selected_user,
+            conference__event=event
+        ) 
         for conference in conferences_list:
-            attendant_qs = Attendant.objects.filter(user=selected_user) 
-
             if not attendant_qs:
                 Attendant.objects.create(user=selected_user, conference=conference)
-                status = "Successful Event Registration"
+
+        status = "Successful Event Registration"
     else:
         status = "Error: Event registration failed"
 
     return HttpResponse(status)
-        
+       
+def json_is_user_inscribed(request):
+    status = 0
+    event = request.REQUEST.get("event", None) 
+    user = request.REQUEST.get("user", None)
+    
+    attendant_qs = Attendant.objects.filter(user=user, conference__event=event)
+    
+    if attendant_qs:
+        status = 1
+
+    return HttpResponse(status)
+
 # Register a new user
 def json_register(request):
     status = ""
@@ -98,14 +122,11 @@ def json_register(request):
 
     return HttpResponse(status)
 
-def json_all_users(request):
-    list_users = User.objects.all()
-    list_response = []
+def json_all_lecturers(request):
+    lecturers_list = Lecturer.objects.all()
 
-    for user in list_users:            
-        list_response.append(user.username)
-
-    json_response = json.dumps({
-        "list_user_names": list_response
-    })
+    json_response = serializers.serialize(
+        'json', 
+        lecturers_list,
+    )
     return HttpResponse(json_response)

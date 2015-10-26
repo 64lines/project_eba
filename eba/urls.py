@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^json_conferences_by_event/$', 'eba.views.json_conferences_by_event', name='conferences_by_event'),
     url(r'^json_login/$', 'eba.views.json_login', name='login'),
     url(r'^json_register/$', 'eba.views.json_register', name='register'),
-    url(r'^json_all_users/$', 'eba.views.json_all_users', name='all_users'),
+    url(r'^json_all_lecturers/$', 'eba.views.json_all_lecturers', name='all_lecturers'),
     url(r'^json_event_registration/$', 'eba.views.json_event_registration', name='event_registration'),
+    url(r'^json_is_user_inscribed/$', 'eba.views.json_is_user_inscribed', name='is_user_inscribed'),
 ]
