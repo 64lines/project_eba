@@ -9,3 +9,8 @@ python manage.py makemessages -l es
 
 # Compile tranlsations 
 python manage.py compilemessages -l es
+
+# Open Shift Server
+rhc setup
+rhc ssh -a eba
+rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=eba/wsgi.py --app eba 
