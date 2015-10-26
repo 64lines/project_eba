@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -26,4 +28,5 @@ urlpatterns = [
     url(r'^json_all_lecturers/$', 'eba.views.json_all_lecturers', name='all_lecturers'),
     url(r'^json_event_registration/$', 'eba.views.json_event_registration', name='event_registration'),
     url(r'^json_is_user_inscribed/$', 'eba.views.json_is_user_inscribed', name='is_user_inscribed'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
