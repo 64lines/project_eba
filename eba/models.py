@@ -3,6 +3,10 @@ from django.contrib import admin
 from django.utils.translation import ugettext as _ 
 from django.contrib.auth.forms import User
 
+# Django field types:
+# CharField, BooleanField, BinaryField, BigIntegerField, IntegerField,
+# TimeField, DateField, DecimalField, FileField, FloatField.
+
 class Category(models.Model):
     name = models.CharField(verbose_name=_("Name"), max_length=30)
 
@@ -56,7 +60,7 @@ class Event(models.Model):
 
     class Meta:
         verbose_name = _('Event')
-        verbose_name_plural = _('Event')
+        verbose_name_plural = _('Events')
     
     def __unicode__(self):
         return self.name
@@ -79,6 +83,23 @@ class Conference(models.Model):
     def __unicode__(self):
         return self.name
 
+    @property
+    def lecturer_name():
+        return Lecturer.objects.get(pk=lecturer.pk).name
+
+class ConferenceScore(models.Model):
+    user = models.ForeignKey(User, verbose_name=_("User"))
+    conference = models.ForeignKey(Conference, verbose_name=_("Conference"))
+    score = models.IntegerField(verbose_name=_("Score"))
+    comment = models.TextField(verbose_name=_("Comment"))
+
+    class Meta:
+        verbose_name = _("Conference Score")
+        verbose_name_plural = _("Conference Scores")
+
+    def __unicode__(self):
+        return "%s %s -> %s" % (self.user.first_name, self.user.last_name, self.conference.name)
+
 class Attendant(models.Model):
     user = models.ForeignKey(User, verbose_name=_("User"))
     conference = models.ForeignKey(Conference, verbose_name=_("Conference"))
@@ -97,3 +118,4 @@ admin.site.register(ConferenceType)
 admin.site.register(Lecturer)
 admin.site.register(Attendant)
 admin.site.register(Location)
+admin.site.register(ConferenceScore)

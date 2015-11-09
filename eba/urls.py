@@ -28,5 +28,7 @@ urlpatterns = [
     url(r'^json_all_lecturers/$', 'eba.views.json_all_lecturers', name='all_lecturers'),
     url(r'^json_event_registration/$', 'eba.views.json_event_registration', name='event_registration'),
     url(r'^json_is_user_inscribed/$', 'eba.views.json_is_user_inscribed', name='is_user_inscribed'),
+    url(r'^json_score_conference/$', 'eba.views.json_score_conference', name='score_conference'),
+    url(r'^json_all_conference_comments/$', 'eba.views.json_all_conference_comments', name='all_conference_comments'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
