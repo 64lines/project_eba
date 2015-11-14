@@ -19,6 +19,7 @@ class Category(models.Model):
 
 class Lecturer(models.Model):
     full_name = models.CharField(verbose_name=_("Full Name"), max_length=50)
+    photo_url = models.CharField(verbose_name=_("Photo url"), max_length=1024)
     summary = models.TextField(verbose_name=_("Summary"))
 
     class Meta:

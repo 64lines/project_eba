@@ -23,7 +23,19 @@ def json_all_events(request):
     events_list = Event.objects.all()
     json_response = serializers.serialize('json', events_list)
     return HttpResponse(json_response)
+
+# JSON service to get events list
+def json_my_events(request):
+    user_id = request.GET.get("user", None)
+    events_list = [] 
     
+    if user_id:
+        list_events = Attendant.objects.filter(user=user_id).values_list("conference__event")
+        events_list = Event.objects.filter(pk__in=list_events)
+
+    json_response = serializers.serialize('json', events_list)
+    return HttpResponse(json_response)
+
 # JSON service to get conferences by event
 def json_conferences_by_event(request):
     conferences_list = []
@@ -171,10 +183,10 @@ def json_user_events(request):
 
 def json_all_conference_comments(request):
     conference_id = request.GET.get("conference", None)
-    conference_list = ConferenceScore.objects.filter(conference__pk=conference_id)
-    
+    comments_list = ConferenceScore.objects.filter(conference__pk=conference_id)
+
     json_response = serializers.serialize(
         'json', 
-        conference_list,
+        comments_list,
     )
     return HttpResponse(json_response)
