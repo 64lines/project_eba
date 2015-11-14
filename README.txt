@@ -23,3 +23,6 @@ Root Password: _rCi5MSACkIJ
 Database Name: eba
 
 Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
+
+#Backup database
+rhc scp eba download . /var/lib/openshift/562e30530c1e66bf84000050/app-root/repo/db.sqlite3
